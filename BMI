@@ -1,0 +1,26 @@
+weight_kg_str = input("Enter user weight in kg \t")
+height_in_str  = input ("Enter user height in inches \t")
+weight_kg = float(weight_kg_str)
+height_in = float(height_in_str)
+
+# converting inches to metres
+hieght_met = (height_in / 39.37)
+
+#applying formula for BMI = weight in kg / (height in met)*2
+bmi = round((weight_kg / (hieght_met**2) ),2)
+bmi_str = str(bmi)
+print (bmi)
+if (bmi < 18.0):
+    {
+        print ("User BMI is " +bmi_str+ " and user is underweight")
+    }
+
+elif (18 < bmi < 24):
+    {
+        print ("User BMI is " +bmi_str+ " and user is in healthy range")
+    }
+
+else:
+    {
+        print ("User BMI is " +bmi_str+ " and user is overweight")
+    }
